@@ -10,3 +10,5 @@ fetch('data/players.json').then(function(response){
     console.error('Something went wrong with fetching the data!');
     console.error(error);
 });
+
+

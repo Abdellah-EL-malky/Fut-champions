@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
-.fond{
-    background: url("../media/img/terrain.png") no-repeat center center / cover;
-    width: 80%;
-}
-
 body {
     font-family: 'Saira Semi Condensed', sans-serif;
     font-weight: 400;
+    background-image: linear-gradient(180deg, rgba(110,103,108,0.9) 0%, rgba(23,7,11,0.9) 100%), url('../media/img/fond.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    overflow: hidden;
 }
+.fond{
+    background: url("../media/img/terrain.png") no-repeat center center / cover;
+    width: 80%;
+    height:780px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
 
 body:after {
     font-size: 1rem;
@@ -190,4 +199,22 @@ body:after {
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
     font-weight: 300;
+}
+
+#formationSelector{
+    position: relative;
+    bottom: 750px;
+    right: 150px;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    background-color: #2c2c2c;
+    color: #e4e7e4;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+}
+
+#formationSelector:focus {
+    outline: none;
+    border: none;
 }
