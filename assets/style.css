@@ -14,14 +14,14 @@ body {
     height: 1000px;
     overflow: hidden;
 }
-.fond{
+
+/* .fond{
     background: url("../media/img/terrain.png") no-repeat center center / cover;
     width: 80%;
     height:780px;
     margin-left: 200px;
     margin-top: 10px;
-}
-
+} */
 
 body:after {
     font-size: 1rem;
@@ -45,9 +45,10 @@ body:after {
 
 .fut-player-card {
     position: relative;
-    width: 15%;
+    top: 300px;
+    width: 12%;
     height: 30%;
-    background-image: url(https://cdn3.futbin.com/content/fifa25/img/cards/hd/1_gold.png?fm=png&ixlib=java-2.1.0&verzion=4&w=252&s=752c78e1c2a5ad17b48f088d1283faed);
+    background-image: url(https://raw.githubusercontent.com/aymanebenhima/FUT-Champ-Ultimate-Team-Assets/refs/heads/main/src/assets/img/badge_ballon_dor.webp);
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -63,6 +64,12 @@ body:after {
     padding: 0 1.5rem;
 }
 
+.player-rating{
+    font-weight: 700;
+    margin-top: -40px;
+    margin-left: 5px;
+}
+
 .fut-player-card .player-card-top .player-master-info {
     position: absolute;
     line-height: 2.2rem;
@@ -71,19 +78,22 @@ body:after {
     text-transform: uppercase;
 }
 
-.fut-player-card .player-card-top .player-master-info .player-rating {
-    font-size: 2rem;
+.fut-player-card .player-card-top .player-master-info .player-position {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.fut-player-card .player-card-top .player-master-info .player-position {
-    font-size: 1.4rem;
+.player-position{
+    margin-top: -15px;
+    margin-left: 5px;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-nation {
     display: block;
-    width: 2rem;
+    width: 20px;
     height: 25px;
-    margin: 0.3rem 0;
+    margin-top: -10px;
+    margin-left: 5px;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-nation img {
@@ -96,17 +106,21 @@ body:after {
     display: block;
     width: 2.1rem;
     height: 40px;
+    margin-left: 0;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-club img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
     object-fit: contain;
 }
 
+.player-club{
+    margin-left: -7px;
+}
+
 .fut-player-card .player-card-top .player-picture {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 95px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -159,16 +173,14 @@ body:after {
     width: 100%;
     display: block;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 10px;
     text-transform: uppercase;
-    border-bottom: 2px solid rgba(233, 204, 116, 0.1);
-    padding-bottom: 0.3rem;
     overflow: hidden;
+    font-weight: 500;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-name span {
     display: block;
-    text-shadow: 2px 2px #111;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features {
@@ -179,7 +191,8 @@ body:after {
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
     border-right: 2px solid rgba(233, 204, 116, 0.1);
-    padding: 0 2.3rem;
+    padding: 0 10px;
+    margin-top: -10px;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
@@ -194,17 +207,19 @@ body:after {
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
     margin-right: 0.3rem;
-    font-weight: 700;
+    font-weight:800;
+    font-size: 8px;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 8px;
 }
 
 #formationSelector{
     position: relative;
-    bottom: 750px;
-    right: 150px;
+    bottom: 800px;
+    left: 30px;
     border-radius: 5px;
     padding: 2px 5px 2px 5px;
     background-color: #2c2c2c;
