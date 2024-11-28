@@ -209,24 +209,6 @@ body:after {
     font-size: 8px;
 }
 
-#formationSelector{
-    position: relative;
-    bottom: 780px;
-    left: 10px;
-    border-radius: 5px;
-    padding: 2px 5px 2px 5px;
-    background-color: #2c2c2c;
-    color: #e4e7e4;
-    -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-}
-
-#formationSelector:focus {
-    outline: none;
-    border: none;
-}
-
 /* Carte RB */
 .fut-player-card2 {
     position: relative;
@@ -1832,12 +1814,10 @@ body:after {
     left: 28px;
     width: 120%;
     fill: black;
-    border: 3px solid black;
     padding: 5px 5px 5px 5px;
     border-radius: 50%;
 }
 
 .addbutton:hover{
     fill: #6A687A;
-    border: 3px solid #6A687A;
 }
