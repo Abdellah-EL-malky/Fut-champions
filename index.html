@@ -91,7 +91,7 @@
             <!-- En-tête du modal -->
             <div class="flex justify-between items-center p-4 border-b dark:border-gray-600">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Ajouter un joueur
+                Add a player
               </h3>
               <button type="button" data-modal-toggle="modal-gk" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <!-- Icône de fermeture -->
@@ -105,7 +105,7 @@
               <div class="grid gap-4 mb-4 grid-cols-1 md:grid-cols-2">
                 <div class="col-span-2">
                   <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Player Name</label>
-                  <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type player name" required="">
+                  <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type player name" required="" required pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]{1,10}$" title="The players name must contain only letters, without spaces." maxlength="10">
               </div>
                 <div class="col-span-2 md:col-span-1">
                   <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Country</label>
@@ -127,33 +127,33 @@
                 </div>
                 <div class="col-span-1">
                   <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                  <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                  <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
       
               <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                       <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Diving</label>
-                      <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Diving"></textarea>
+                      <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Diving" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
                   <div>
                       <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Handling</label>
-                      <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Handling"></textarea>
+                      <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Handling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
                   <div>
                       <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kicking</label>
-                      <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Kicking"></textarea>
+                      <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Kicking" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
                   <div>
                       <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Reflexes</label>
-                      <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Reflexes"></textarea>
+                      <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Reflexes" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
                   <div>
                       <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Speed</label>
-                      <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Speed"></textarea>
+                      <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Speed" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
                   <div>
                       <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Positioning</label>
-                      <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Positioning"></textarea>
+                      <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Positioning" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                   </div>
               </div>
           </div>
@@ -277,33 +277,33 @@
                 </div>
                 <div class="col-span-1">
                   <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                  <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                  <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
       
               <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                    <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                    <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                    <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                    <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                    <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                    <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                    <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                    <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                    <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                    <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                    <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                    <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
             </div>
         </div>
@@ -495,33 +495,33 @@
                 </div>
                 <div class="col-span-1">
                   <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                  <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                  <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
       
               <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                    <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                    <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                    <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                    <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                    <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                    <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                    <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                    <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                    <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                    <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                    <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                    <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
             </div>
         </div>
@@ -602,7 +602,8 @@
         </div>
       </div>
         <!-- Modal LB -->
-        <div id="modal-lb" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex justify-center items-center">        <div class="relative w-full max-w-md">
+        <div id="modal-lb" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex justify-center items-center">        
+          <div class="relative w-full max-w-md">
           <div class="bg-white rounded-lg shadow dark:bg-gray-700">
             <div class="flex justify-between items-center p-4 border-b dark:border-gray-600">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -643,33 +644,33 @@
                 </div>
                 <div class="col-span-1">
                   <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                  <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                  <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
       
               <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                    <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                    <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                    <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                    <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                    <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                    <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                    <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                    <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                    <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                    <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
                 <div>
                     <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                    <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                    <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                 </div>
             </div>
         </div>
@@ -930,33 +931,33 @@
               </div>
               <div class="col-span-1">
                 <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
             </div>
     
             <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                   <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                  <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                  <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                  <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                  <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                  <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                  <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                  <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                  <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                  <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                  <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                  <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                  <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
           </div>
       </div>
@@ -1082,33 +1083,33 @@
               </div>
               <div class="col-span-1">
                 <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
             </div>
     
             <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                   <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                  <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                  <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                  <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                  <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                  <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                  <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                  <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                  <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                  <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                  <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
               <div>
                   <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                  <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                  <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
               </div>
           </div>
       </div>
@@ -1236,33 +1237,33 @@
                             </div>
                             <div class="col-span-1">
                               <label for="rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rating</label>
-                              <textarea id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating"></textarea>
+                              <input id="rating" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Rating" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                           </div>
                   
                           <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                               <div>
                                   <label for="textarea1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pace</label>
-                                  <textarea id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace"></textarea>
+                                  <input id="textarea1" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Pace" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                               <div>
                                   <label for="textarea2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Shooting</label>
-                                  <textarea id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting"></textarea>
+                                  <input id="textarea2" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Shooting" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                               <div>
                                   <label for="textarea3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing</label>
-                                  <textarea id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing"></textarea>
+                                  <input id="textarea3" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Passing" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                               <div>
                                   <label for="textarea4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dribbling</label>
-                                  <textarea id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling"></textarea>
+                                  <input id="textarea4" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dribbling" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                               <div>
                                   <label for="textarea5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Defending</label>
-                                  <textarea id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending"></textarea>
+                                  <input id="textarea5" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Defending" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                               <div>
                                   <label for="textarea6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Physical</label>
-                                  <textarea id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical"></textarea>
+                                  <input id="textarea6" rows="1" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Physical" type="number" required min="1" max="100" title="Choose a number between 1 and 100."></input>
                               </div>
                           </div>
                       </div>
