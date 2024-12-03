@@ -246,9 +246,7 @@ body:after {
 #STR { bottom: 300px; right: 1038px; }
 
 #player-modal .relative {
-    /* Limite la hauteur maximale de la modale à 80% de la hauteur du viewport */
     max-height: 80vh;
-    /* Permet le défilement interne si le contenu dépasse */
     overflow-y: auto;
 }
 
@@ -281,35 +279,71 @@ body:after {
         text-align: center;
     }
 
+    .player-picture {
+        width: 80vw;
+        height: 80vh;
+        margin: 0 auto;
+    }
+
+    .player-master-info .player-picture img {
+        width: 8vw;
+        height: 80vh;
+        object-fit: cover;
+    }
+
     .player-rating {
-        margin-top: 10px;
+        margin-top: -50px;
         font-size: 1rem;
+        color: white;
     }
 
     .player-position, .player-club, .player-nation {
         font-size: 0.9rem;
     }
 
+    .player-position{
+        margin-top: -25px;
+        margin-bottom: 10px;
+        margin-left: -25px;
+        color: white;
+        font-weight:600;
+    }
+
     .player-club img, .player-nation img {
-        width: 50px; /* Réduit la taille des images */
+        width: 5vw;
         height: 50px;
         margin: 0 auto;
+        margin-top: -15px;
+    }
+
+    .player-nation img{
+        margin-top: -20px;
+        margin-left: -15px;
+        max-width: 4vw;
+    }
+
+    .player-club img{
+        margin-left: -10px;
+        max-width: 5vw;
+        margin-top: -20px;
     }
 
     .player-card-bottom .player-info .player-name {
-        font-size: 12px;
         text-align: center;
+        margin-top: -50px;
+        font-size: smaller;
+        
     }
 
     .player-features-col span {
-        font-size: 8px;
-        flex-direction: column; /* Empile les valeurs et titres des caractéristiques */
-        align-items: center;
+        font-size: 8rem;
     }
 
     #player-modal .relative {
         max-height: 70vh;
+        max-width: 70vw;
         padding: 0.5rem;
+        margin-left: -30px;
     }
 
     #player-modal .bg-white {
