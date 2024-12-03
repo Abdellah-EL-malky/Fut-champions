@@ -244,3 +244,111 @@ body:after {
 #RM { bottom: 100px; left: 110px; }
 #STL { bottom: 300px; right: 285px; }
 #STR { bottom: 300px; right: 1038px; }
+
+#player-modal .relative {
+    /* Limite la hauteur maximale de la modale à 80% de la hauteur du viewport */
+    max-height: 80vh;
+    /* Permet le défilement interne si le contenu dépasse */
+    overflow-y: auto;
+}
+
+@media (max-width: 431px) {
+    body {
+        background-position: center top;
+        width: 90px;
+    }
+    #GK { top: 230px; left: 630px; }
+#RB { top: 50px; left: 700px; }
+#CBR { top: 90px; left: 520px; }
+#CBL { top: 90px; left: 300px; }
+#LB { top: 50px; left: 90px; }
+#LM { bottom: 150px; left: 10px; }
+#CML { bottom: 100px; left: 40px; }
+#CMR { bottom: 100px; left: 70px; }
+#RM { bottom: 150px; left: 70px; }
+#STL { bottom: 350px; right: 250px; }
+#STR { bottom: 350px; right: 180px; }
+
+    .fut-player-card {
+        width: 100%;
+        height: 14%;
+        padding: 2rem 0;
+    }
+
+    .player-card-top {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .player-rating {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .player-position, .player-club, .player-nation {
+        font-size: 0.9rem;
+    }
+
+    .player-club img, .player-nation img {
+        width: 50px; /* Réduit la taille des images */
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .player-card-bottom .player-info .player-name {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .player-features-col span {
+        font-size: 8px;
+        flex-direction: column; /* Empile les valeurs et titres des caractéristiques */
+        align-items: center;
+    }
+
+    #player-modal .relative {
+        max-height: 70vh;
+        padding: 0.5rem;
+    }
+
+    #player-modal .bg-white {
+        padding: 0.5rem;
+    }
+
+    #player-modal h3 {
+        font-size: 1rem;
+    }
+
+    #player-modal .modal-close svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    input[type="text"], input[type="number"], input[type="file"] {
+        font-size: 0.rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-close {
+        font-size: 1.5rem;
+    }
+
+    .addbutton {
+        width: 80%;
+        padding: 3px;
+        top: 0;
+        left: 0;
+    }
+
+    .addbutton svg {
+        width: 20px;
+        height: 20px;
+    }
+}

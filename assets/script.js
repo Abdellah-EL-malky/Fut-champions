@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const positions = ['GK', 'RB', 'CBR', 'CBL', 'LB', 'LM', 'CML', 'CMR', 'RM', 'STL', 'STR'];
   const positionStats = {
-      'GK': ['Diving', 'Handling', 'Kicking', 'Reflexes', 'Speed', 'Positioning'],
-      'default': ['Pace', 'Shooting', 'Passing', 'Dribbling', 'Defending', 'Physical']
+    'GK': ['Diving', 'Handling', 'Kicking', 'Reflexes', 'Speed', 'Positioning'],
+    'default': ['Pace', 'Shooting', 'Passing', 'Dribbling', 'Defending', 'Physical']
   };
 
   positions.forEach(pos => {
-      const card = createPlayerCard(pos);
-      wrapper.appendChild(card);
+    const card = createPlayerCard(pos);
+    wrapper.appendChild(card);
   });
 
   document.querySelectorAll('.addbutton').forEach(button => {
-      button.addEventListener('click', () => openModal(button.closest('.fut-player-card').id));
+    button.addEventListener('click', () => openModal(button.closest('.fut-player-card').id));
   });
 
   modalCloseButton.addEventListener('click', closeModal);
@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
   modalForm.addEventListener('submit', handleFormSubmit);
 
   function createPlayerCard(position) {
-      const card = document.createElement('div');
-      card.id = position;
-      card.className = 'fut-player-card';
-      card.innerHTML = `
+    const card = document.createElement('div');
+    card.id = position;
+    card.className = 'fut-player-card';
+    card.innerHTML = `
           <div class="player-card-top">
               <div class="player-master-info">
                   <button class="addbutton" type="button">
@@ -60,49 +60,49 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>
           </div>
       `;
-      return card;
+    return card;
   }
 
   function openModal(position) {
-      const stats = positionStats[position] || positionStats['default'];
-      modalForm.reset();
-      modalForm.querySelector('#position').value = position;
-      stats.forEach((stat, index) => {
-          modalForm.querySelector(`label[for="stat${index + 1}"]`).textContent = stat;
-      });
-      playerModal.classList.remove('hidden');
+    const stats = positionStats[position] || positionStats['default'];
+    modalForm.reset();
+    modalForm.querySelector('#position').value = position;
+    stats.forEach((stat, index) => {
+      modalForm.querySelector(`label[for="stat${index + 1}"]`).textContent = stat;
+    });
+    playerModal.classList.remove('hidden');
   }
 
   function closeModal() {
-      playerModal.classList.add('hidden');
+    playerModal.classList.add('hidden');
   }
 
   function handleFormSubmit(event) {
-      event.preventDefault();
-      const formData = new FormData(modalForm);
-      const position = formData.get('position');
-      const card = document.getElementById(position);
+    event.preventDefault();
+    const formData = new FormData(modalForm);
+    const position = formData.get('position');
+    const card = document.getElementById(position);
 
-      card.querySelector('.player-name span').textContent = formData.get('name');
-      card.querySelector('.player-rating span').textContent = formData.get('rating');
-      card.querySelector('.player-nation img').src = URL.createObjectURL(formData.get('country'));
-      card.querySelector('.player-nation img').hidden = false;
-      card.querySelector('.player-club img').src = URL.createObjectURL(formData.get('club'));
-      card.querySelector('.player-club img').hidden = false;
-      card.querySelector('.player-picture img').src = URL.createObjectURL(formData.get('face'));
-      card.querySelector('.player-picture img').hidden = false;
+    card.querySelector('.player-name span').textContent = formData.get('name');
+    card.querySelector('.player-rating span').textContent = formData.get('rating');
+    card.querySelector('.player-nation img').src = URL.createObjectURL(formData.get('country'));
+    card.querySelector('.player-nation img').hidden = false;
+    card.querySelector('.player-club img').src = URL.createObjectURL(formData.get('club'));
+    card.querySelector('.player-club img').hidden = false;
+    card.querySelector('.player-picture img').src = URL.createObjectURL(formData.get('face'));
+    card.querySelector('.player-picture img').hidden = false;
 
-      const stats = positionStats[position] || positionStats['default'];
-      stats.forEach((stat, index) => {
-          const col = Math.floor(index / 3);
-          const row = index % 3;
-          const statElement = card.querySelectorAll('.player-features-col')[col].querySelectorAll('span')[row];
-          statElement.querySelector('.player-feature-value').textContent = formData.get(`stat${index + 1}`);
-          statElement.querySelector('.player-feature-title').textContent = stat;
-      });
+    const stats = positionStats[position] || positionStats['default'];
+    stats.forEach((stat, index) => {
+      const col = Math.floor(index / 3);
+      const row = index % 3;
+      const statElement = card.querySelectorAll('.player-features-col')[col].querySelectorAll('span')[row];
+      statElement.querySelector('.player-feature-value').textContent = formData.get(`stat${index + 1}`);
+      statElement.querySelector('.player-feature-title').textContent = stat;
+    });
 
-      const addButton = card.querySelector('.addbutton');
-addButton.style.display = 'none';
-closeModal();
+    const addButton = card.querySelector('.addbutton');
+    addButton.style.display = 'none';
+    closeModal();
   }
 });
